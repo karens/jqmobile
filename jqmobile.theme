@@ -15,12 +15,21 @@ function jqmobile_preprocess_item_list(&$variables) {
 
 }
 
+function jqmobile_preprocess_container(&$variables) {
+  if ($variables['element']['#type'] == 'more_link') {
+    //$variables['children'] = str_replace('<a', '<a data-role="button" data-inline="true" ', $variables['children']);
+    //$variables['element']['#markup'] = $variables['children'];
+    //$variables['#children'] = $variables['children'];
+    //dsm($variables);
+  }
+}
+
 function jqmobile_preprocess_links(&$variables) {
   if (!in_array('dropbutton', $variables['attributes']['class'])) {
     foreach ($variables['links'] as $key => $value) {
       if (!empty($value['link'])) {
-        //$variables['links'][$key]['link']['#options']['attributes']['data-role'] = 'button';
-        //$variables['links'][$key]['link']['#options']['attributes']['data-inline'] = 'true';
+        $variables['links'][$key]['link']['#options']['attributes']['data-role'] = 'button';
+        $variables['links'][$key]['link']['#options']['attributes']['data-inline'] = 'true';
       }
     }
   }

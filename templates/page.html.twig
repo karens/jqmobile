@@ -79,14 +79,15 @@
     'column',
     page.sidebar_first and page.sidebar_second ? 'ui-block-b',
     page.sidebar_first and not page.sidebar_second ? 'ui-block-b',
-    page.sidebar_second and not page.sidebar_first ? 'ui-block-a',
+    page.sidebar_second and not page.sidebar_first ? 'ui-block-b',
   ]
 %}
 {%
   set secondclasses = [
     'layout-sidebar-second',
     'column',
-    'ui-block-c',
+    page.sidebar_first and page.sidebar_second ? 'ui-block-c',
+    page.sidebar_second and not page.sidebar_first ? 'ui-block-a',
   ]
 %}
 
@@ -95,7 +96,7 @@
   <header role="banner" data-role="header" data-position="fixed" data-theme="a" class="ui-header ui-bar-a">
 
     {% if page.panel_menu %}
-      <a class="panel-link panel-link-menu" href="#panel-menu" data-role="button" data-icon="bars" data-iconpos="left" title="Menu"><span class="icon-label">Menu</span></a>
+      <a class="panel-link panel-link-menu" href="#panel-menu" data-role="button" data-icon="bars" data-iconpos="notext" title="Menu"></a>
     {% endif %}
 
     <div class="header-region">
@@ -134,7 +135,7 @@
     </div>{# ./header-region #}
 
     {% if page.panel_options %}
-      <a class="panel-link panel-link-options" href="#panel-options" data-role="button" data-icon="gear" data-iconpos="right" title="Options"><span class="icon-label">Options</span></a>
+      <a class="panel-link panel-link-options" href="#panel-options" data-role="button" data-icon="gear" data-iconpos="notext" title="Options"></a>
     {% endif %}
 
   </header>

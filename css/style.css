@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-/* Title styling */
+/* Title and logo styling */
 .ui-header .ui-title {
   font-size: 1em;
   margin: 0;
@@ -15,18 +15,30 @@
   font-size: 1em;
   text-decoration: none;
 }
-/* Large title on wide viewports */
+/* Hide logo on small viewports */
+#logo {
+  display: none;
+}
+/*
+ Override jquery Mobile setting
+ for title that adds 30% left and right side margins
+ 2em is enough to clear the panel icons on the sides
+*/
+.ui-header .ui-title,
+.ui-footer .ui-title {
+  margin: 0 2em !important;
+}
+/* Use large title on wide viewports */
 @media all and (min-width: 50em) {
+  #logo {
+    display: block;
+  }
   .ui-header .ui-title {
     font-size: 2em;
   }
   .ui-header .ui-title a {
     font-size: 2em;
   }
-}
-/* Constrain the height of the logo to the height of the header */
-.ui-header #logo img {
-  max-height: 3em;
 }
 
 /* Footer styling */
@@ -66,7 +78,7 @@ table {
   margin-top: 1em;
 }
 
-/* Leave room for read more link below views lists */
+/* Leave room for 'more' link below views block lists */
 .views-element-container ul {
   padding-bottom: 2em;
 }

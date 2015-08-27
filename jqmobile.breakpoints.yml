@@ -1,0 +1,18 @@
+jqmobile.mobile:
+  label: mobile
+  mediaQuery: '(min-width: 0em)'
+  weight: 0
+  multipliers:
+   - 1x
+jqmobile.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 50em) and (max-width: 69em)'
+  weight: 1
+  multipliers:
+    - 1x
+jqmobile.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 70em)'
+  weight: 2
+  multipliers:
+    - 1x

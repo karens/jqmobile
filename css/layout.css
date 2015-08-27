@@ -1,0 +1,34 @@
+/* Responsive columns, center column wider, stacked at narrow widths. */
+@media all and (max-width: 49em) {
+	.ui-grid-b > .column.ui-block-a,
+	.ui-grid-b > .column.ui-block-b,
+ .ui-grid-b > .column.ui-block-c {
+		 width: 100%;
+		 float:none;
+	}
+}
+@media all and (min-width: 50em) {
+	.ui-grid-b > .column.ui-block-b {
+   width: 49.95%;
+ }
+	.ui-grid-b > .column.ui-block-a,
+	.ui-grid-b > .column.ui-block-c {
+   display: block;
+   width: 24.925%;
+ }
+}
+
+/* Add some left and right padding in wide views */
+@media all and (min-width: 70em) {
+  .region-sidebar-first {
+    margin-right: 1em;
+    padding: 1em;
+    background-color: #e9e9e9;
+  }
+
+  .region-sidebar-second {
+    margin-left: 1em;
+    padding: 1em;
+    background-color: #e9e9e9;
+  }
+}

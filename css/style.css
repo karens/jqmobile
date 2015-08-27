@@ -1,0 +1,74 @@
+/* Global css goes here */
+
+.header-region {
+  text-align: center;
+}
+
+/* Title styling */
+.ui-header .ui-title {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.ui-header .ui-title a {
+  font-size: 1em;
+  text-decoration: none;
+}
+/* Large title on wide viewports */
+@media all and (min-width: 50em) {
+  .ui-header .ui-title {
+    font-size: 2em;
+  }
+  .ui-header .ui-title a {
+    font-size: 2em;
+  }
+}
+/* Constrain the height of the logo to the height of the header */
+.ui-header #logo img {
+  max-height: 3em;
+}
+
+/* Footer styling */
+.ui-footer {
+  text-align: center;
+  min-height: 3em;
+}
+.ui-footer a {
+  text-decoration: none;
+}
+
+/* Hide underlines on heading anchors */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
+.tabs.primary a {
+  padding: 1em;
+}
+.tabs.secondary a {
+  padding: .5em;
+}
+
+table {
+  width: 100%;
+}
+.region-title {
+  font-weight: bold;
+  font-size: larger;
+}
+.region-content {
+  margin-top: 1em;
+}
+
+/* Leave room for read more link below views lists */
+.views-element-container ul {
+  padding-bottom: 2em;
+}
+
+

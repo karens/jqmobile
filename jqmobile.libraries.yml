@@ -1,0 +1,21 @@
+global-css:
+  css:
+    theme:
+      css/style.css: {}
+      css/layout.css: {}
+
+global-js:
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+
+jqmobile-js:
+  header: true
+  css:
+    theme:
+      js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css: {}
+  js:
+    js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js: {}
+  dependencies:
+    - core/jquery

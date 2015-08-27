@@ -1,0 +1,36 @@
+<?php
+
+function jqmobile_preprocess_page(&$variables) {
+  //if ($variables['is_game']) {
+  //  $variables['#attached']['library'][] = 'jqmobile/game-js';
+  //}
+}
+
+function jqmobile_page_attachments_alter(array &$page) {
+  //$page['#attached']['library'][] = 'jqmobile/global-js';
+
+}
+
+function jqmobile_preprocess_item_list(&$variables) {
+
+}
+
+function jqmobile_preprocess_links(&$variables) {
+  if (!in_array('dropbutton', $variables['attributes']['class'])) {
+    foreach ($variables['links'] as $key => $value) {
+      if (!empty($value['link'])) {
+        //$variables['links'][$key]['link']['#options']['attributes']['data-role'] = 'button';
+        //$variables['links'][$key]['link']['#options']['attributes']['data-inline'] = 'true';
+      }
+    }
+  }
+}
+
+function jqmobile_preprocess_menu_local_tasks(&$variables) {
+  //$variables['content_attributes']['data-role'] = 'navbar';
+  foreach ($variables['primary'] as $key => $value) {
+    //$variables['primary'][$key]['#link']['localized_options']['attributes']['data-role'] = 'button';
+    //$variables['primary'][$key]['#link']['localized_options']['attributes']['data-inline'] = 'true';
+    $variables['primary'][$key]['#link']['localized_options']['attributes']['data-ajax'] = 'false';
+  }
+}

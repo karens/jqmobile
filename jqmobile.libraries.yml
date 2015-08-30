@@ -1,8 +1,9 @@
 global-css:
   css:
+    layout:
+      css/layout.css: {}
     theme:
       css/style.css: {}
-      css/layout.css: {}
 
 global-js:
   js:
@@ -12,10 +13,14 @@ global-js:
 
 jqmobile-js:
   header: true
+  remote: http://jquerymobile.com/
+  version: 1.4.5
+  license:
+    url: http://jquerymobile.com/resources/download/jquery.mobile-1.4.5.zip
   css:
-    theme:
-      js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css: {}
+    base:
+      assets/vendor/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css: {}
   js:
-    js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js: {}
+    assets/vendor/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js: {}
   dependencies:
     - core/jquery

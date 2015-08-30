@@ -20,4 +20,14 @@
 
   });
 
+  // Add effect to display dialogs on top of dimmed-out source page.
+  // @see tqclarkson.com/2012/04/19/transparent-jquery-mobile-dialogs/
+  $(document).on('pagebeforeshow', 'div[data-dialog="true"]', function(e, ui) {
+    ui.prevPage.addClass("ui-dialog-background");
+  });
+  $(document).on('pagehide', 'div[data-dialog="true"]', function(e, ui) {
+    $(".ui-dialog-background ").removeClass("ui-dialog-background");
+  });
+
+
 })(jQuery);

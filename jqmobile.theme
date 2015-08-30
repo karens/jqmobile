@@ -1,27 +1,23 @@
 <?php
 
-function jqmobile_preprocess_page(&$variables) {
-  //if ($variables['is_game']) {
-  //  $variables['#attached']['library'][] = 'jqmobile/game-js';
-  //}
-}
+function jqmobile_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 
-function jqmobile_page_attachments_alter(array &$page) {
-  //$page['#attached']['library'][] = 'jqmobile/global-js';
-
-}
-
-function jqmobile_preprocess_item_list(&$variables) {
-
-}
-
-function jqmobile_preprocess_container(&$variables) {
-  if ($variables['element']['#type'] == 'more_link') {
-    //$variables['children'] = str_replace('<a', '<a data-role="button" data-inline="true" ', $variables['children']);
-    //$variables['element']['#markup'] = $variables['children'];
-    //$variables['#children'] = $variables['children'];
-    //dsm($variables);
+  // Add a suggestion to use the modal template if the path has 'modal' in it.
+  $url = \Drupal\Core\Url::fromRoute('<current>');
+  $path = $url->toString();
+  $path_args = explode('/', $path);
+  if (in_array('modal', $path_args)) {
+    $suggestions[] = 'page__modal';
   }
+
+}
+
+function jqmobile_preprocess_page(&$variables) {
+
+  // Add a page.path variable for the template.
+  $url = \Drupal\Core\Url::fromRoute('<current>');
+  $variables['page']['path'] = $url->toString();
+
 }
 
 function jqmobile_preprocess_links(&$variables) {

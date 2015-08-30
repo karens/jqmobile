@@ -83,4 +83,31 @@ table {
   padding-bottom: 2em;
 }
 
+@media all and (min-width: 50em) {
+
+  /*
+     Transparent dialog background on deskptop
+     from tqclarkson.com/2012/04/19/transparent-jquery-mobile-dialogs/
+  */
+  .ui-dialog-background {
+    opacity: 0.5;
+    display: block !important;
+    -webkit-transition: opacity 0.5s ease-in;
+  }
+  .ui-dialog-background.pop.in {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in;
+  }
+
+  /* Make dialogs expand to fit desktop widths better. */
+  .ui-dialog-contain {
+    max-width: 66%;
+  }
+  .ui-dialog {
+    min-height: 100% !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+}
+
 

@@ -29,5 +29,4 @@
     $(".ui-dialog-background ").removeClass("ui-dialog-background");
   });
 
-
 })(jQuery);

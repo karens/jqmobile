@@ -39,3 +39,16 @@ function jqmobile_preprocess_menu_local_tasks(&$variables) {
     $variables['primary'][$key]['#link']['localized_options']['attributes']['data-ajax'] = 'false';
   }
 }
+
+function jqmobile_preprocess_pager(&$variables) {
+  // Empty href values in the pager don't work as expected in JQM, need to force
+  // a pager value into them or attempts to back up won't work.
+  if (empty($variables['items']['first']['href'])) {
+    $variables['items']['first']['href'] = '?page=0';
+  }
+  if (empty($variables['items']['previous']['href'])) {
+    $variables['items']['previous']['href'] = '?page=0';
+  }
+  $variables['pages'][1]['href'] = '?page=0';
+
+}

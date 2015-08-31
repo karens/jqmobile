@@ -19,6 +19,10 @@
 #logo {
   display: none;
 }
+.ui-dialog .ui-title {
+  padding-top: .5em;
+}
+
 /*
  Override jquery Mobile setting
  for title that adds 30% left and right side margins
@@ -78,9 +82,16 @@ table {
   margin-top: 1em;
 }
 
-/* Leave room for 'more' link below views block lists */
+ul.links ul,
 .views-element-container ul {
-  padding-bottom: 2em;
+  padding: 0;
+}
+ul.links li {
+  display:inline-block;
+}
+ul.links a,
+.more-link a {
+  text-decoration: none;
 }
 
 @media all and (min-width: 50em) {

@@ -22,5 +22,5 @@ stylesheets-remove:
 # Comment out to use, uncomment to remove core css.
   - core/assets/vendor/normalize-css/normalize.css
   #- core/modules/system/css/system.module.css
-  - core/modules/system/css/system.theme.css
+  #- core/modules/system/css/system.theme.css
   - core/modules/views/css/views.module.css

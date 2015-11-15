@@ -17,6 +17,7 @@ libraries:
   - jqmobile/global-css
   - jqmobile/global-js
   - jqmobile/jqmobile-js
+  - jqmobile/google-fonts-css
 
 stylesheets-remove:
 # Comment out to use, uncomment to remove core css.

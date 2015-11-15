@@ -25,3 +25,11 @@ jqmobile-js:
     assets/vendor/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js: {}
   dependencies:
     - core/jquery
+
+google-fonts-css:
+  css:
+    base:
+      css/font-family.css: {}
+      https://fonts.googleapis.com/css?family=Cutive: { type: external}
+      #https://fonts.googleapis.com/css?family=Delius: { type: external}
+      #https://fonts.googleapis.com/css?family=Short+Stack: { type: external}

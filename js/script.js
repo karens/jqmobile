@@ -1,12 +1,13 @@
 /* Global js goes here */
 
 (function ($) {
-
-
   $(document).bind("mobileinit", function(){
 
-    // Disable ajax page handling on admin paths.
-    if (window.location.pathname.substring(0, 6) == '/admin') {
+    var no_ajax = ['test-timeline'];
+
+    // Disable ajax page handling on some paths.
+    if (window.location.pathname.substring(0, 6) == '/admin' ||
+      $.inArray(window.location.pathname, no_ajax)) {
       $.mobile.ajaxEnabled = false
       $.mobile.pushStateEnabled = false;
     }
